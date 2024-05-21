@@ -1,7 +1,14 @@
 package main
 
-import "fmt"
+import (
+	"log"
+
+	"github.com/MJU-Capstone-6/devmark-frontend/cmd"
+)
 
 func main() {
-	fmt.Println("Hello")
+	err := cmd.Execute()
+	if err != nil {
+		log.Fatal(err)
+	}
 }
